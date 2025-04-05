@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <h1>Weather Forecast</h1>
+            <form id="weather-form">
+                <div class="input-group">
+                    <input type="text" id="city-input" placeholder="Enter city name" required>
+                    <button type="submit" id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+            <div class="error-message" id="error-box"></div>
+        </div>
+
+        <div class="weather-info" id="weather-container">
+            <div class="loading-indicator" id="loading">
+                <div class="spinner"></div>
+                <p>Fetching weather data...</p>
+            </div>
+
+            <div class="weather-data hidden" id="weather-data">
+                <div class="location">
+                    <h2 id="city-name">City Name</h2>
+                    <div class="country" id="country"></div>
+                </div>
+
+                <div class="main-weather">
+                    <img id="weather-icon" src="" alt="Weather icon">
+                    <div class="temperature">
+                        <span id="temperature">--</span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <div class="weather-description" id="weather-description">Weather description</div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-temperature-low"></i>
+                        <div>
+                            <span>Feels like</span>
+                            <div id="feels-like">--°C</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <div>
+                            <span>Humidity</span>
+                            <div id="humidity">--%</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <span>Wind Speed</span>
+                            <div id="wind-speed">-- m/s</div>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <div>
+                            <span>Pressure</span>
+                            <div id="pressure">-- hPa</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by <a href="#">Swapnil Sen</a> | Using OpenWeatherMap API</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html> 
